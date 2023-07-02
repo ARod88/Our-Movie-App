@@ -1,6 +1,12 @@
 body {
     background-color: #141414;
     color: white;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.example::-webkit-scrollbar {
+    display: none;
 }
 
 .container-fluid {
@@ -74,4 +80,9 @@ body {
 
 .mb-4 {
     margin-bottom: 1.5rem !important;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: flex-start;
 }
