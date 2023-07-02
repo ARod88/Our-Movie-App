@@ -1,5 +1,36 @@
-body{
+body {
     background-color: #141414;
     color: white;
 }
 
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.movie-app > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-start {
+    justify-content: flex-start !important;
+}
+
+.m-3 {
+    margin: 1rem !important;
+}
