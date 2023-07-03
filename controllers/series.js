@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
 router.get('/', (req,res) => {
-    res.send('GET /series')
+    res.render('pages/series')
 })
 
 module.exports = router
