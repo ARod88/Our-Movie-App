@@ -5,7 +5,7 @@ function Def (html) {
         
         <html>
             <head>
-                <title>Title</title>
+                <title>MoviesRUs</title>
             </head>
             <body>
                 <nav>
