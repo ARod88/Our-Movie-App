@@ -7,6 +7,7 @@ import SearchBox from "./Components/SearchBox";
 import { fadeInTopRight } from 'react-animations';
 import 'animate.css';
 
+
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
 
 function App() {

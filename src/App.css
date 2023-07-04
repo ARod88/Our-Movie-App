@@ -111,14 +111,31 @@ body {
     padding-top: 150px;
   }
   
-  .font-animation {
-  transform: translate(80px);
+ 
 
-    
+  h1 {
+    font-style: italic;
+    font-size: 8em;
+    font-weight: lighter;
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: 5%;
+    transform: translateX(50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    background-image: linear-gradient(to right, aqua,rgb(164, 24, 157), red, blue); /* Change the colors as per your preference */
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: colorTransition 8s linear forwards; /* Adjust the animation duration and timing as needed */
   }
   
-  h1 {
-    color: blue;
-    position: absolute;
+  @keyframes colorTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
   
