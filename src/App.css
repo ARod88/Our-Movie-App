@@ -113,7 +113,7 @@ body {
   
 h1 {
   
-  background: linear-gradient(90deg, aqua, rgb(164, 24, 157), red, blue);
+  background: linear-gradient(90deg, aqua, rgb(164, 24, 157), red, blue, white,rgb(202, 202, 114));
   background-size: 400%;
   font-style: italic;
   font-size: 8em;
@@ -127,7 +127,7 @@ h1 {
   -webkit-background-clip: text;
   
   -webkit-text-stroke: 5px transparent;
-  animation: animate 10s linear infinite;
+  animation: animate 10s linear infinite, slideInLeft 0.2s ease-in 0.5s 1 normal both;
 
 }
 
@@ -137,5 +137,28 @@ h1 {
   }
   100% {
     background-position: 400%;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 758px) {
+
+  .movie-slate {
+    max-width: 50%;
+    padding-top: 100px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    right: -4%;
   }
 }
