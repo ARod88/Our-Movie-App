@@ -8,9 +8,10 @@ import SearchBox from "./Components/SearchBox";
 function App() {
     const [movies, setMovies] = useState([]);
     const [searchValue, setSearchValue] = useState("");
+    const [searchType, setSearchType] = useState("");
 
-    const getMovieRequest = async (searchValue) => {
-        const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=9d06303`;
+    const getMovieRequest = async (searchValue,searchType) => {
+        const url = `http://www.omdbapi.com/?s=${searchValue}&type=${searchType}&apikey=9d06303`;
         const response = await fetch(url);
         const responseJSON = await response.json();
         if (responseJSON.Search) {
@@ -19,8 +20,8 @@ function App() {
     };
 
     useEffect(() => {
-        getMovieRequest(searchValue);
-    }, [searchValue]);
+        getMovieRequest(searchValue,searchType);
+    }, [searchValue,searchType]);
 
     return (
         <div className="container-fluid movie-app">
@@ -29,6 +30,8 @@ function App() {
                 <SearchBox
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
+                    searchType={searchType}
+                    setSearchType={setSearchType}
                 />
             </div>
             <div className="row">
