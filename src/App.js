@@ -40,10 +40,24 @@ function App() {
     return (
         <div>
 
+        {/* <div className="container-fluid movie-app">
+            <div className="movie-app">
+                <div className="font-animation">
+                    <h1>Our movie app</h1>
+                </div>
+                <div>
+                    <img
+                        className="movie-slate"
+                        src={movieSlatePicture}
+                        alt="movie-slate-pic"
+                    />
+                </div>
+            </div>
+    </div> */}
             <div>
                 <Router>
                     <header>
-                        <h1>WELCOME TO OUR MOVIE APP</h1>
+                        <h1>MOVIES R US</h1>
                         <Container>
                             <Nav defaultActiveKey='/' variant='tabs' fill>
                                 <Nav.Item>
