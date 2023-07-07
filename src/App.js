@@ -40,7 +40,7 @@ function App() {
       </div>
     </div>
             <div className="row d-flex align-items-center mt-4 mb-4">
-                {/* <MovieListHeading heading="Movies" /> */}{/*DONT REALLY NEED THIS... LOL*/}
+                <MovieListHeading heading={searchValue} />
                 <SearchBox
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
