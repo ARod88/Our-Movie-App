@@ -4,6 +4,11 @@ import "./App.css";
 import MovieList from "./Components/MovieList";
 import MovieListHeading from "./Components/MovieListHeading";
 import SearchBox from "./Components/SearchBox";
+import Home from './Components/Home'
+import Movies from './Components/Movies'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
 
@@ -29,29 +34,46 @@ function App() {
     }, [searchValue,searchType]);
 
     return (
+        <div>
 
-        <div className="container-fluid movie-app">
-            <div className="movie-app">
-      <div className='font-animation'>
-        <h1>Our movie app</h1>
-      </div>
-      <div>
-        <img className='movie-slate' src={movieSlatePicture} alt='movie-slate-pic' />
-      </div>
-    </div>
-            <div className="row d-flex align-items-center mt-4 mb-4">
-                {/* <MovieListHeading heading="Movies" /> */}{/*DONT REALLY NEED THIS... LOL*/}
-                <SearchBox
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                    searchType={searchType}
-                    setSearchType={setSearchType}
-                />
+            <div>
+                <Router>
+                    <header>
+                        <h1>WELCOME TO OUR MOVIE APP</h1>
+                        <Container>
+                            <Nav defaultActiveKey='/' variant='tabs' fill>
+                                <Nav.Item>
+                                    <Link to='/'>
+                                        <Nav.Link href='/'>
+                                            Home
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                                <Nav.Item>
+                                    <Link to='/movies'>
+                                        <Nav.Link href='/movies' eventKey={'moviespage'}>
+                                            Movies
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                            </Nav>
+                        </Container>
+                    </header>
+
+                    <div>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/movies" element={<Movies />} />
+                        </Routes>
+                    </div>
+                </Router>
             </div>
-            <div className="row">
-                <MovieList movies={movies} />
-            </div>
+
         </div>
+
+        
     );
 
 }
