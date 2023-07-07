@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+
 
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
 
