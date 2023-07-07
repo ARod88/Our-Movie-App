@@ -6,12 +6,16 @@ import MovieListHeading from "./Components/MovieListHeading";
 import SearchBox from "./Components/SearchBox";
 import Home from './Components/Home'
 import Movies from './Components/Movies'
+import Favorites from './Components/Favorites'
+import VideoGames from './Components/VideoGames'
+import Series from './Components/Series'
+import NotFound from "./Components/NotFound";
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
-
+document.title = 'MovieApp'
 
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
 
@@ -58,6 +62,30 @@ function App() {
                                     </Link>
                                 </Nav.Item>
 
+                                <Nav.Item>
+                                    <Link to='/series'>
+                                        <Nav.Link href='/series' eventKey={'seriespage'}>
+                                            Series
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                                <Nav.Item>
+                                    <Link to='/videogames'>
+                                        <Nav.Link href='/videogames' eventKey={'videogamespage'}>
+                                            Video Games
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                                <Nav.Item>
+                                    <Link to='/favorites'>
+                                        <Nav.Link href='/favorites' eventKey={'favoritespage'}>
+                                            Favorites
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
                             </Nav>
                         </Container>
                     </header>
@@ -66,6 +94,10 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/movies" element={<Movies />} />
+                            <Route path="/series" element={<Series />} />
+                            <Route path="/videogames" element={<VideoGames />} />
+                            <Route path="/favorites" element={<Favorites />} />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
                 </Router>
