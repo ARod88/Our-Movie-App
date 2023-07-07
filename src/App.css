@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: #141414;
     color: white;
@@ -90,4 +91,24 @@ body {
 .poster{
     height: 400px;
     width: auto;
+=======
+*{
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+}
+
+.movie-slate {
+    max-width: 50%;
+    padding-top: 150px;
+    }
+
+
+    
+
+
+h1 {
+    color: blue;
+
+>>>>>>> 7b4b0be (added new files)
 }
