@@ -1,11 +1,11 @@
-import React from 'react';import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import MovieList from "./Components/MovieList";
 import MovieListHeading from "./Components/MovieListHeading";
 import SearchBox from "./Components/SearchBox";
-import { fadeInTopRight } from 'react-animations';
-import 'animate.css';
+
+
 
 
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
