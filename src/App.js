@@ -16,8 +16,6 @@ import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
 document.title = 'MovieApp'
-=======
-
 
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
 
@@ -25,10 +23,9 @@ function App() {
 
     return (
 
-        <div>
 
         <div className="container-fluid movie-app">
-=======
+
         <div className="container-fluid movie-app">
             <div className="movie-app">
                 <div className="font-animation">
