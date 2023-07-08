@@ -16,15 +16,10 @@ const SearchBox = (props) => {
                 onChange={(event) => props.setSearchType(event.target.value)}
             >
                 <option value="">media</option>
-                <option value="movie">Movie</option>
-                <option value="series">Series</option>
-                <option value="game">Game</option>
-=======
-                <option value="">media</option>
                 <option className="drop" value="movie">Movie</option>
                 <option className="drop" value="series">Series</option>
                 <option className="drop" value="game">Game</option>
->>>>>>> Stashed changes
+
             </select>
         </form>
     );

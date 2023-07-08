@@ -36,7 +36,7 @@ function App() {
                                     </Link>
                                 </Nav.Item>
 
-                                <Nav.Item>
+                                
 
                                 
                              
@@ -76,45 +76,6 @@ function App() {
                 </Router>
 
     );
-
-    // return (
-    //     <div>
-    //         <div>
-    //             <Router>
-    //                 <header>
-    //                     <h1>WELCOME TO OUR MOVIE APP</h1>
-    //                     <Container>
-    //                         <Nav defaultActiveKey="/" variant="tabs" fill>
-    //                             <Nav.Item>
-    //                                 <Link to="/">
-    //                                     <Nav.Link href="/">Home</Nav.Link>
-    //                                 </Link>
-    //                             </Nav.Item>
-
-    //                             <Nav.Item>
-    //                                 <Link to="/movies">
-    //                                     <Nav.Link
-    //                                         href="/movies"
-    //                                         eventKey={"moviespage"}
-    //                                     >
-    //                                         Movies
-    //                                     </Nav.Link>
-    //                                 </Link>
-    //                             </Nav.Item>
-    //                         </Nav>
-    //                     </Container>
-    //                 </header>
-
-    //                 <div>
-    //                     <Routes>
-    //                         <Route path="/" element={<Home />} />
-    //                         <Route path="/movies" element={<Movies />} />
-    //                     </Routes>
-    //                 </div>
-    //             </Router>
-    //         </div>
-    //     </div>
-    // );
 }
 
 export default App;
