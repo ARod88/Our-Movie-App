@@ -16,31 +16,20 @@ import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom'
 
 
 document.title = 'MovieApp'
+=======
+
 
 const movieSlatePicture = new URL("./images/movie-slate.png", import.meta.url);
 
 function App() {
-    const [movies, setMovies] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
-    const [searchType, setSearchType] = useState("");
-
-    const getMovieRequest = async (searchValue,searchType) => {
-        const url = `http://www.omdbapi.com/?s=${searchValue}&type=${searchType}&apikey=9d06303`;
-        const response = await fetch(url);
-        const responseJSON = await response.json();
-        if (responseJSON.Search) {
-            setMovies(responseJSON.Search);
-        }
-    };
-
-    useEffect(() => {
-        getMovieRequest(searchValue,searchType);
-    }, [searchValue,searchType]);
 
     return (
+
         <div>
 
-        {/* <div className="container-fluid movie-app">
+        <div className="container-fluid movie-app">
+=======
+        <div className="container-fluid movie-app">
             <div className="movie-app">
                 <div className="font-animation">
                     <h1>Our movie app</h1>
@@ -52,8 +41,9 @@ function App() {
                         alt="movie-slate-pic"
                     />
                 </div>
+
             </div>
-    </div> */}
+    </div> 
             <div>
                 <Router>
                     <header>
@@ -121,7 +111,6 @@ function App() {
 
         
     );
-
 }
 
 export default App;
