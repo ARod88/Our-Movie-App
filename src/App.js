@@ -14,19 +14,32 @@ document.title = "MovieApp";
 
 function App() {
     return (
-        <div className="container-fluid movie-app">
-            <div>
+
                 <Router>
                     <header>
-                        <h1>MOVIES R US</h1>
                         <Container>
                             <Nav defaultActiveKey="/" variant="tabs" fill>
-                                
                                 <Nav.Item>
                                     <Link to="/">
                                         <Nav.Link href="/">Home</Nav.Link>
                                     </Link>
                                 </Nav.Item>
+
+                                <Nav.Item>
+                                    <Link to="/searchpage">
+                                        <Nav.Link
+                                            href="/SearchPage"
+                                            eventKey={"searchpage"}
+                                        >
+                                            SearchPage
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                                <Nav.Item>
+
+                                
+                             
 
                                 <Nav.Item>
                                     <Link to="/favorites">
@@ -35,18 +48,12 @@ function App() {
                                             eventKey={"favoritespage"}
                                         >
                                             Favorites
+
                                         </Nav.Link>
                                     </Link>
                                 </Nav.Item>
 
-                                <Nav.Item>
-                                    <Link to="/searchpage">
-                                        <Nav.Link href="/searchpage">
-                                            Search Page
-                                        </Nav.Link>
-                                    </Link>
-                                </Nav.Item>
-
+                               
                             </Nav>
                         </Container>
                     </header>
@@ -67,8 +74,7 @@ function App() {
                         </Routes>
                     </div>
                 </Router>
-            </div>
-        </div>
+
     );
 }
 

@@ -14,12 +14,15 @@ export default function Home(){
             </div>
             <div>
                 <img
-                    className="home-picture"
+
+                    className="movie-slate"
                     src={movieSlatePicture}
                     alt="movie-slate-pic"
                 />
+                </div>
+                </div>
             </div>
-        </div>
-    </div>
+
     )
 }
+
