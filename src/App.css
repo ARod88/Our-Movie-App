@@ -1,3 +1,4 @@
+
 * {
     padding: 0%;
     margin: 0%;
@@ -27,7 +28,11 @@ h1 {
     position: absolute;
     text-align: center;
     right: 5%;
-    /* transform: translateX(50%); */
+
+    transform: translateX(50%); 
+
+     transform: translateX(50%); 
+
     padding: 10px;
     -webkit-background-clip: text;
 
@@ -65,3 +70,10 @@ h1 {
         right: -4%;
     }
 }
+
+    h1 {
+        font-size: 2em;
+        right: -4%;
+    }
+}
+
