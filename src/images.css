@@ -1,4 +1,15 @@
-.home-picture{
+/* .home-picture{
+    width: 80%;
+    height: auto;
+} */
+
+.drop {
+    background-color: white;
+}
+
+.max-height {
+    max-height: fit-content;
+}.home-picture{
     width: 80%;
     height: auto;
 }
