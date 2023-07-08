@@ -7,11 +7,14 @@
   background-color: black;
 }
 
+<<<<<<< Updated upstream
 .movie-app {
     overflow-x: auto;
     flex-wrap: nowrap;
 }
 
+=======
+>>>>>>> Stashed changes
 .movie-slate {
   max-width: 40%;
   padding-top: 150px;

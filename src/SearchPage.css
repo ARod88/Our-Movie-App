@@ -1,8 +1,8 @@
 body {
     background-color: #141414;
     color: white;
-    /* overflow-y: hidden;
-    overflow-x: hidden; */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .example::-webkit-scrollbar {
@@ -23,36 +23,6 @@ body {
     margin-right: -15px;
     margin-left: -15px;
 }
-
-ul {
-    list-style: none;
-}
-
-ol {
-    list-style: none;
-}
-
-li {
-    list-style-type: none;
-    padding: 1%;
-  }
-
-.width-40 {
-    width: 40%;
-}
-
-.width-60 {
-    width: 60%;
-}
-
-.full-img {
-    width: 100%;
-}
-
-/* .inline {
-    display: flex;
-    flex-direction: column;
-} */
 
 .movie-app > .row {
     overflow-x: auto;

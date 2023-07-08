@@ -1,4 +1,5 @@
 import React from "react";
+import '../images.css'
 
 const SearchBox = (props) => {
     return (
@@ -10,6 +11,7 @@ const SearchBox = (props) => {
                 placeholder="Type to search..."
             ></input>
             <select
+                className="drop"
                 value={props.setSearchType}
                 onChange={(event) => props.setSearchType(event.target.value)}
             >
@@ -17,6 +19,12 @@ const SearchBox = (props) => {
                 <option value="movie">Movie</option>
                 <option value="series">Series</option>
                 <option value="game">Game</option>
+=======
+                <option value="">media</option>
+                <option className="drop" value="movie">Movie</option>
+                <option className="drop" value="series">Series</option>
+                <option className="drop" value="game">Game</option>
+>>>>>>> Stashed changes
             </select>
         </form>
     );

@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import "../SearchPage.css"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "../SearchPage.css";
+import "../images.css"
 
-const MovieShowPage = ()=>{
-    const {id} = useParams()
-    const [movieData, setMovieData] = useState([])
-    const imdbID = id
+const MovieShowPage = () => {
+    const { id } = useParams();
+    const [movieData, setMovieData] = useState([]);
+    const imdbID = id;
 
     const getMovieInfo = async (imdbID) => {
         const url = `http://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=9d06303`;
@@ -21,11 +22,11 @@ const MovieShowPage = ()=>{
     }, [imdbID]);
 
     return (
-        <div className='row'>
-            <div className='width-40'>
-                <img className='full-img' src={movieData.Poster}></img>
+        <div className="row">
+            <div className="width-40 divs-left">
+                <img className="full-img" src={movieData.Poster}></img>
             </div>
-            <div className='width-60'>
+            <div className="width-60 divs-left">
                 <ul>
                     <li>Title: {movieData.Title}</li>
                     <li>Media Type: {movieData.Type}</li>
@@ -38,16 +39,17 @@ const MovieShowPage = ()=>{
                     <li>Cast: {movieData.Actors}</li>
                     <li>Box Office: {movieData.BoxOffice}</li>
                     <li>Awards: {movieData.Awards}</li>
-                    <li><button>Add to Favorites</button></li>
+                    <li>
+                        <button className="drop">Add to Favorites</button>
+                    </li>
                 </ul>
             </div>
-            <div>
+            <div className="divs-left divs-right">
                 <h3>Plot: </h3>
                 <p>{movieData.Plot}</p>
             </div>
-            
         </div>
-    )
-}
+    );
+};
 
-export default MovieShowPage
+export default MovieShowPage;

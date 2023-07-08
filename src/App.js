@@ -133,6 +133,9 @@ export default App;
     return (
         <div>
             <div>
+=======
+            
+>>>>>>> Stashed changes
                 <Router>
                     <header>
                         <h1>WELCOME TO OUR MOVIE APP</h1>
@@ -146,10 +149,22 @@ export default App;
                                     </Link>
                                 </Nav.Item>
 
+<<<<<<< Updated upstream
                                 <Nav.Item>
                                     <Link to='/movies'>
                                         <Nav.Link href='/movies' eventKey={'moviespage'}>
                                             Movies
+=======
+
+                                <Nav.Item>
+                                    <Link to="/favorites">
+                                        <Nav.Link
+                                            href="/favorites"
+                                            eventKey={"favoritespage"}
+                                        >
+                                            Favorites
+
+>>>>>>> Stashed changes
                                         </Nav.Link>
                                     </Link>
                                 </Nav.Item>
