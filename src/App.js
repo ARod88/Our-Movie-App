@@ -1,37 +1,20 @@
 import React, { useState, useEffect } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import MovieList from "./Components/MovieList";
-import MovieListHeading from "./Components/MovieListHeading";
-import SearchBox from "./Components/SearchBox";
 import Home from "./Components/Home";
 import Favorites from "./Components/Favorites";
-// import movie-slate.png from "images/movie-slate.png"
 import NotFound from "./Components/NotFound";
 import SearchPage from "./Components/SearchPage";
+import MovieShowPage from "./Components/MovieShowPage";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 document.title = "MovieApp";
 
 function App() {
     return (
-        // <div className="container-fluid movie-app">
-        //     <div className="movie-app">
-        //         <div className="font-animation">
-        //             <h1>Our movie app</h1>
-        //         </div>
-        //         <div>
-        //             <img
-        //                 className="movie-slate"
-        //                 src={movieSlatePicture}
-        //                 alt="movie-slate-pic"
-        //             />
-        //         </div>
-            
-            // <div>
+
                 <Router>
                     <header>
                         <Container>
@@ -54,12 +37,18 @@ function App() {
                                 </Nav.Item>
 
                                 <Nav.Item>
+
+                                
+                             
+
+                                <Nav.Item>
                                     <Link to="/favorites">
                                         <Nav.Link
                                             href="/favorites"
                                             eventKey={"favoritespage"}
                                         >
                                             Favorites
+
                                         </Nav.Link>
                                     </Link>
                                 </Nav.Item>
@@ -77,12 +66,15 @@ function App() {
                                 path="/searchpage"
                                 element={<SearchPage />}
                             />
+                            <Route
+                                path="/movieshowpage/:id"
+                                element={<MovieShowPage />}
+                            />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </div>
                 </Router>
-            // </div>
-        // </div>
+
     );
 }
 
