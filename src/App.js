@@ -29,7 +29,7 @@ function App() {
         <div className="container-fluid movie-app">
             <div className="movie-app">
                 <div className="font-animation">
-                    <h1>Our movie app</h1>
+                <h1>MOVIES R US</h1>
                 </div>
                 <div>
                     <img
@@ -44,7 +44,7 @@ function App() {
             <div>
                 <Router>
                     <header>
-                        <h1>MOVIES R US</h1>
+                        
                         <Container>
                             <Nav defaultActiveKey='/' variant='tabs' fill>
                                 <Nav.Item>
