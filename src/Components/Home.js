@@ -1,4 +1,5 @@
 import React from "react"
+import "../images.css"
 
 const movieSlatePicture = new URL('../images/movie-slate.png', import.meta.url);
 
@@ -13,7 +14,7 @@ export default function Home(){
             </div>
             <div>
                 <img
-                    className="movie-slate"
+                    className="home-picture"
                     src={movieSlatePicture}
                     alt="movie-slate-pic"
                 />

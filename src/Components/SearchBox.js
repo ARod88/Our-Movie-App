@@ -13,7 +13,7 @@ const SearchBox = (props) => {
                 value={props.setSearchType}
                 onChange={(event) => props.setSearchType(event.target.value)}
             >
-                <option value=""></option>
+                <option value="">media</option>
                 <option value="movie">Movie</option>
                 <option value="series">Series</option>
                 <option value="game">Game</option>
