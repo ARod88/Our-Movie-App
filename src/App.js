@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import NavBar from "./Components/NavBar";
 import "./App.css";
 import MovieList from "./Components/MovieList";
 import MovieListHeading from "./Components/MovieListHeading";
 import SearchBox from "./Components/SearchBox";
 import Home from "./Components/Home";
 import Favorites from "./Components/Favorites";
-// import movie-slate.png from "images/movie-slate.png"
 import NotFound from "./Components/NotFound";
 import SearchPage from "./Components/SearchPage";
 import Container from "react-bootstrap/Container";
@@ -18,27 +17,14 @@ document.title = "MovieApp";
 
 function App() {
     return (
-        // <div className="container-fluid movie-app">
-        //     <div className="movie-app">
-        //         <div className="font-animation">
-        //             <h1>Our movie app</h1>
-        //         </div>
-        //         <div>
-        //             <img
-        //                 className="movie-slate"
-        //                 src={movieSlatePicture}
-        //                 alt="movie-slate-pic"
-        //             />
-        //         </div>
-            
-            // <div>
+
                 <Router>
                     <header>
                         <Container>
                             <Nav defaultActiveKey="/" variant="tabs" fill>
                                 <Nav.Item>
                                     <Link to="/">
-                                        <Nav.Link href="/">Home</Nav.Link>
+git                                        <Nav.Link href="/">Home</Nav.Link>
                                     </Link>
                                 </Nav.Item>
 
@@ -76,6 +62,10 @@ function App() {
                             <Route
                                 path="/searchpage"
                                 element={<SearchPage />}
+                            />
+                            <Route
+                                path="/movieshowpage/:id"
+                                element={<MovieShowPage />}
                             />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
