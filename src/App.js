@@ -9,12 +9,15 @@ import MovieShowPage from "./Components/MovieShowPage";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
 
 document.title = "MovieApp";
 
+
+
 function App() {
     return (
-        <Router>
+               <Router>
             <header>
                 <Container>
                     <Nav defaultActiveKey="/" variant="tabs" fill>
@@ -61,7 +64,7 @@ function App() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
-        </Router>
+        </Router> 
     );
 }
 
