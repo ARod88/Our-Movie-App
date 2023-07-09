@@ -7,7 +7,7 @@
   background-color: black;
 }
 
-.movie-slate {
+.movie-slate  {
   max-width: 40%;
   padding-top: 150px;
   margin: 0 auto; /* Center the element horizontally */
@@ -112,4 +112,9 @@ input.from-control{
   padding-right:100px;
   border-right:100px;
   width:none; 
+}
+
+.notfound{
+ text-align: end;
+ translate: -08% 500%;
 }
