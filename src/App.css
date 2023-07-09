@@ -9,8 +9,9 @@
 .movie-slate  {
   max-width: 40%;
   padding-top: 150px;
-  margin: 0 auto; /* Center the element horizontally */
+  margin: 0 auto; 
 }
+
 
 h1 {
   display: flex;
@@ -75,9 +76,29 @@ h1 {
     h1 {
         font-size: 2em;
         right: -4%;
-    }
+    } 
 
-div.nav.nav-tabs.nav-fill{
+     .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-link {
+      padding-right: 20px;
+      color: grey;
+      text-decoration: none;
+    }
+    
+    .nav-link.active {
+      padding: 20px;
+      color: grey;
+      text-decoration: none;
+    }
+     
+
+
+/* div.nav.nav-tabs.nav-fill{
   display:inline-flex;
 }
 
@@ -90,30 +111,30 @@ a.nav-link.active{
   padding:20px;
   color: grey;
   text-decoration: none;
-}
+} */
 
-div.container{
+/* div.container{
   padding:20px;
-}
+} */
 
 
-.form-control{
+/* .form-control{
   text-align:left;
   width:100px;
-}
+} */
 
-form.col.col-sm-4{
+/* form.col.col-sm-4{
   padding-right: 100%;
 
-}
+} */
 
-input.from-control{
+/* input.from-control{
   padding-right:100px;
   border-right:100px;
   width:none; 
-}
+} */
 
-.notfound{
+/* .notfound{
  text-align: end;
  translate: -08% 500%;
-}
+} */ 

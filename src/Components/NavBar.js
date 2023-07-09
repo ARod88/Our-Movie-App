@@ -8,13 +8,14 @@ import Favorites from './Favorites';
 import SearchPage from './SearchPage';
 import MovieShowPage from './MovieShowPage';
 import NotFound from './NotFound';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/home">Navbar</Navbar.Brand>
+    
           <Nav className="justify-content-between" style={{ width: '100%' }}>
             <Nav.Item>
               <Nav.Link as={Link} to="/home" className="nav-link">Home</Nav.Link>
@@ -41,3 +42,6 @@ function NavBar() {
 }
 
 export default NavBar;
+
+
+
