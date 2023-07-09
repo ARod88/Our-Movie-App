@@ -6,7 +6,7 @@ import { Link, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Favorites from './Favorites';
 import SearchPage from './SearchPage';
-// import MovieShowPage from './MovieShowPage';
+import MovieShowPage from './MovieShowPage';
 import NotFound from './NotFound';
 
 function NavBar() {
@@ -33,7 +33,7 @@ function NavBar() {
         <Route path="/home" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/searchpage" element={<SearchPage />} />
-        {/* <Route path="/movieshowpage/:id" element={<MovieShowPage />} /> */}
+        <Route path="/movieshowpage/:id" element={<MovieShowPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
