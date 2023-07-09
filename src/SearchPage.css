@@ -1,8 +1,8 @@
 body {
     background-color: #141414;
     color: white;
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    /* overflow-y: hidden;  */
+    overflow-x: hidden; 
 }
 
 .divs-left {
@@ -13,7 +13,13 @@ body {
     margin-right: 5%;
 }
 
+.divs-bottom {
+    margin-bottom: 5%;
+}
 
+.divs-top {
+    margin-top: 5%;
+}
 
 .example::-webkit-scrollbar {
     display: none;
