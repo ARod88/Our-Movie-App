@@ -1,5 +1,4 @@
 
-
 * {
   padding: 0;
   margin: 0;
@@ -116,4 +115,8 @@ input.from-control{
 .notfound{
  text-align: end;
  translate: -08% 500%;
+}
+
+.favorite-view{
+  padding: 6%;
 }
