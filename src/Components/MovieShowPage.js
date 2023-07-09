@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import "../SearchPage.css";
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import "../SearchPage.css"
 import "../images.css"
 
 const MovieShowPage = () => {
@@ -44,7 +44,7 @@ const MovieShowPage = () => {
                     </li>
                 </ul>
             </div>
-            <div className="divs-left divs-right">
+            <div className="divs-left divs-right divs-bottom divs-top">
                 <h3>Plot: </h3>
                 <p>{movieData.Plot}</p>
             </div>
