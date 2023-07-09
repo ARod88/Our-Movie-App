@@ -1,9 +1,10 @@
 import React from "react";
 import '../images.css'
+// import "../SearchPage.css"
 
 const SearchBox = (props) => {
     return (
-        <form className="col col-sm-4">
+        <form className="col col-sm-4 divs-right">
             <input
                 className="form-control"
                 value={props.value}
