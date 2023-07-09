@@ -17,15 +17,16 @@ document.title = "MovieApp";
 
 function App() {
     return (
-               <Router>
-            <header>
-                <Container>
-                    <Nav defaultActiveKey="/" variant="tabs" fill>
-                        <Nav.Item>
-                            <Link to="/">
-                                <Nav.Link href="/">Home</Nav.Link>
-                            </Link>
-                        </Nav.Item>
+            
+                <Router>
+                    <header>
+                        <Container>
+                            <Nav defaultActiveKey="/" variant="tabs" fill>
+                                <Nav.Item>
+                                    <Link to="/">
+                                        <Nav.Link href="/">Home</Nav.Link>
+                                    </Link>
+                                </Nav.Item>
 
                         <Nav.Item>
                             <Link to="/searchpage">
@@ -38,19 +39,27 @@ function App() {
                             </Link>
                         </Nav.Item>
 
-                        <Nav.Item>
-                            <Link to="/favorites">
-                                <Nav.Link
-                                    href="/favorites"
-                                    eventKey={"favoritespage"}
-                                >
-                                    Favorites
-                                </Nav.Link>
-                            </Link>
-                        </Nav.Item>
-                    </Nav>
-                </Container>
-            </header>
+                    
+
+                                
+                             
+
+                                <Nav.Item>
+                                    <Link to="/favorites">
+                                        <Nav.Link
+                                            href="/favorites"
+                                            eventKey={"favoritespage"}
+                                        >
+                                            Favorites
+
+                                        </Nav.Link>
+                                    </Link>
+                                </Nav.Item>
+
+                               
+                            </Nav>
+                        </Container>
+                    </header>
 
             <div>
                 <Routes>
