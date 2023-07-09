@@ -28,15 +28,3 @@ const SearchBox = (props) => {
 export default SearchBox;
 
 
-
-
-/*  EXTRA CODE...
-
-            <input
-                className="form-control"
-                // value={props.value}
-                onChange={(event) => props.setSearchType(event.target.value)}
-                placeholder="Movie, Series, or Game?"
-            ></input> 
-
-*/

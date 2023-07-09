@@ -9,7 +9,9 @@
 
 .max-height {
     max-height: fit-content;
-}.home-picture{
+}
+
+.home-picture {
     width: 80%;
     height: auto;
 }
