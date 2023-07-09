@@ -1,5 +1,4 @@
 
-
 * {
   padding: 0;
   margin: 0;
@@ -137,4 +136,8 @@ a.nav-link.active{
 /* .notfound{
  text-align: end;
  translate: -08% 500%;
-} */ 
+}
+
+.favorite-view{
+  padding: 6%;
+}
