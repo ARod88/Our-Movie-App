@@ -1,15 +1,12 @@
 
 
-
 * {
   padding: 0;
   margin: 0;
   background-color: black;
 }
 
-
-
-.movie-slate {
+.movie-slate  {
   max-width: 40%;
   padding-top: 150px;
   margin: 0 auto; /* Center the element horizontally */
@@ -80,6 +77,43 @@ h1 {
         right: -4%;
     }
 
+div.nav.nav-tabs.nav-fill{
+  display:inline-flex;
+}
+
+a.nav-link{
+  padding-right:20px;
+  color: grey; 
+  text-decoration: none;
+}
+a.nav-link.active{
+  padding:20px;
+  color: grey;
+  text-decoration: none;
+}
+
+div.container{
+  padding:20px;
+}
 
 
+.form-control{
+  text-align:left;
+  width:100px;
+}
 
+form.col.col-sm-4{
+  padding-right: 100%;
+
+}
+
+input.from-control{
+  padding-right:100px;
+  border-right:100px;
+  width:none; 
+}
+
+.notfound{
+ text-align: end;
+ translate: -08% 500%;
+}

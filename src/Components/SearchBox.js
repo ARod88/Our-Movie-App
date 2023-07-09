@@ -1,8 +1,10 @@
 import React from "react";
+import '../images.css'
+// import "../SearchPage.css"
 
 const SearchBox = (props) => {
     return (
-        <form className="col col-sm-4">
+        <form className="col col-sm-4 divs-right">
             <input
                 className="form-control"
                 value={props.value}
@@ -10,13 +12,14 @@ const SearchBox = (props) => {
                 placeholder="Type to search..."
             ></input>
             <select
+                className="drop"
                 value={props.setSearchType}
                 onChange={(event) => props.setSearchType(event.target.value)}
             >
                 <option value="">media</option>
-                <option value="movie">Movie</option>
-                <option value="series">Series</option>
-                <option value="game">Game</option>
+                <option className="drop" value="movie">Movie</option>
+                <option className="drop" value="series">Series</option>
+                <option className="drop" value="game">Game</option>
             </select>
         </form>
     );
@@ -25,15 +28,3 @@ const SearchBox = (props) => {
 export default SearchBox;
 
 
-
-
-/*  EXTRA CODE...
-
-            <input
-                className="form-control"
-                // value={props.value}
-                onChange={(event) => props.setSearchType(event.target.value)}
-                placeholder="Movie, Series, or Game?"
-            ></input> 
-
-*/
