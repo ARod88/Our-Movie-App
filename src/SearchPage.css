@@ -2,7 +2,7 @@ body {
     background-color: #141414;
     color: white;
     /* overflow-y: hidden;  */
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 }
 
 .divs-left {
@@ -29,8 +29,8 @@ body {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .row {
