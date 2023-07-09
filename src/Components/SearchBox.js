@@ -19,7 +19,6 @@ const SearchBox = (props) => {
                 <option className="drop" value="movie">Movie</option>
                 <option className="drop" value="series">Series</option>
                 <option className="drop" value="game">Game</option>
-
             </select>
         </form>
     );

@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import "../SearchPage.css";
-import "../images.css";
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import "../SearchPage.css"
+import "../images.css"
 
 const MovieShowPage = () => {
     const { id } = useParams();
@@ -24,11 +24,7 @@ const MovieShowPage = () => {
     return (
         <div className="row">
             <div className="width-40 divs-left">
-                <img
-                    className="full-img"
-                    src={movieData.Poster}
-                    alt={movieData.Title}
-                ></img>
+                <img className="full-img" src={movieData.Poster}></img>
             </div>
             <div className="width-60 divs-left">
                 <ul>
