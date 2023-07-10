@@ -4,7 +4,7 @@ import "../SearchPage.css"
 
 const SearchBox = (props) => {
     return (
-        <form className="divs-right">
+        <form className="col col-sm-4 divs-right">
             <input
                 className="form-control"
                 value={props.value}
