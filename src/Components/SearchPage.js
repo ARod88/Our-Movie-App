@@ -30,7 +30,7 @@ const SearchPage = () => {
     return (
         <div className="container-fluid movie-app">
           <div className="row d-flex align-items-center mt-2 mb-4 custom-margin">
-            <MovieListHeading heading={searchValue} />
+
             <SearchBox
               searchValue={searchValue}
               setSearchValue={setSearchValue}
