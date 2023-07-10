@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "../SearchPage.css"
+import "../SearchPage.css";
 import MovieList from "./MovieList";
 import MovieListHeading from "./MovieListHeading";
 import SearchBox from "./SearchBox";
 
-const SearchPage = ()=>{
+const movieSlatePic2 = new URL(
+    "../images/movie-slate-open.png",
+    import.meta.url
+);
+
+const SearchPage = () => {
     const [movies, setMovies] = useState([]);
     const [searchValue, setSearchValue] = useState("");
     const [searchType, setSearchType] = useState("");
@@ -24,21 +29,30 @@ const SearchPage = ()=>{
 
     return (
         <div className="container-fluid movie-app">
-            
-            <div className="row d-flex align-items-center mt-4 mb-4">
-                <MovieListHeading heading={searchValue} />
-                <SearchBox
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                    searchType={searchType}
-                    setSearchType={setSearchType}
-                />
+          <div className="row d-flex align-items-center mt-2 mb-4 custom-margin">
+            <MovieListHeading heading={searchValue} />
+            <SearchBox
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              searchType={searchType}
+              setSearchType={setSearchType}
+            />
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <img
+                className="movie-slate-2"
+                src={movieSlatePic2}
+                alt="movie-slate-pic-2"
+              />
             </div>
-            <div className="row">
-                <MovieList movies={movies} />
+            <div className="col-md-8 d-flex flex-wrap">
+              <MovieList movies={movies} />
             </div>
+          </div>
         </div>
-    );
-}
+      );
+      
+};
 
 export default SearchPage;
