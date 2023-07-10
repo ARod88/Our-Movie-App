@@ -9,14 +9,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 document.title = "MovieApp";
 
-
-
 function App() {
-  return (
-    <Router>
-      <NavBar />
-    </Router>
-  );
-}
+    return (
+      <Router>
+        <NavBar />
+      </Router>
+    );
+  }
 
 export default App;
