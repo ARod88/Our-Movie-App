@@ -247,10 +247,39 @@ h1 {
   }
   
   .poster {
-      height: 300px;
-      width: auto;
-  }
-    
+    height: 300px;
+    width: auto;
+}
+
+.notfound {
+  translate: -10% 60%;
+}
+
+.font-fav{
+  background: linear-gradient(
+      90deg,
+      aqua,
+      rgb(164, 24, 157),
+      red,
+      blue,
+      white,
+      rgb(202, 202, 114)
+  );
+  background-size: 400%;
+  font-style: italic;
+ 
+  font-weight: lighter;
+  color: black;
+  -webkit-background-clip: text;
+
+  -webkit-text-stroke: 5px transparent;
+  animation: animate 10s linear infinite,
+      slideInLeft 0.2s ease-in 0.5s 1 normal both;
+}
+
+.favorite{
+  translate: 35% 55%;
+}
      
 
 

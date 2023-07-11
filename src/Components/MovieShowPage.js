@@ -1,13 +1,12 @@
-
-
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import "../SearchPage.css"
-import "../images.css"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "../SearchPage.css";
+import "../images.css";
 
 const MovieShowPage = () => {
     const { id } = useParams();
     const [movieData, setMovieData] = useState([]);
+    const [text, setText] = useState("");
     const imdbID = id;
 
     const getMovieInfo = async (imdbID) => {
@@ -22,6 +21,14 @@ const MovieShowPage = () => {
     useEffect(() => {
         getMovieInfo(imdbID);
     }, [imdbID]);
+
+    const handleClickAdd = () => {
+        setText("Added to Favorites!!");
+    };
+
+    const handleClickRemove = () => {
+        setText("Removed from Favorites..");
+    };
 
     return (
         <div className="row">
@@ -41,9 +48,14 @@ const MovieShowPage = () => {
                     <li>Cast: {movieData.Actors}</li>
                     <li>Box Office: {movieData.BoxOffice}</li>
                     <li>Awards: {movieData.Awards}</li>
-                    <li>
-                        <button className="drop">Add to Favorites</button>
-                    </li>
+
+                    <button className="drop" onClick={handleClickAdd}>
+                        Add to Favorites
+                    </button>
+                    <button className="drop" onClick={handleClickRemove}>
+                        Remove from Favorites
+                    </button>
+                    <p>{text}</p>
                 </ul>
             </div>
             <div className="divs-left divs-right divs-bottom divs-top">
