@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "../SearchPage.css";
 import "../images.css";
 import { useContext } from "react";
@@ -10,7 +11,22 @@ const movieSlatePic2 = new URL(
 );
 
 export default function Favorite() {
-    const userData = useContext(Context);
+    const [selectData, setSelectData] = useState([]);
+    // const userData = useContext(Context);
+
+    const getInfo = async () => {
+        const url = `http://localhost:4000/users`;
+        const response = await fetch(url);
+        const responseJSON = await response.json();
+        if (responseJSON) {
+            setSelectData(responseJSON);
+        }
+    };
+
+    useEffect(() => {
+        getInfo();
+    }, []);
+
     return (
         <div>
             <h2>FAVORITE PAGE</h2>
@@ -18,18 +34,20 @@ export default function Favorite() {
             <div className="">
                 <div>
                     <h2 className="">MOVIES</h2>
-                    <div className="d-flex justify-content-start m-3">
-                        {userData.map((movie, index) => (
-                            <div>
-                                <Link to={`/movieshowpage/${movie.imdbID}`}>
-                                    <img
-                                        className="poster"
-                                        src={movie.Poster}
-                                        alt="picture here..."
-                                    ></img>
-                                </Link>
-                            </div>
-                        ))}
+                    <div className="container">
+                        <div className="row">
+                            {selectData.map((movie, index) => (
+                                <div className="col-md-4">
+                                    <Link to={`/movieshowpage/${movie.imdbID}`}>
+                                        <img
+                                            className="img-fluid"
+                                            src={movie.Poster}
+                                            alt="picture here..."
+                                        ></img>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <br />

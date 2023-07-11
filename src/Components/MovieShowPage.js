@@ -20,7 +20,8 @@ const MovieShowPage = () => {
 
     useEffect(() => {
         getMovieInfo(imdbID);
-    }, [imdbID]);
+    }, []);
+
 
     const handleClickAdd = () => {
         setText("Added to Favorites!!");
@@ -30,6 +31,7 @@ const MovieShowPage = () => {
         setText("Removed from Favorites..");
     };
 
+    
     return (
         <div className="row">
             <div className="width-40 divs-left">
@@ -67,3 +69,31 @@ const MovieShowPage = () => {
 };
 
 export default MovieShowPage;
+
+
+
+// /*
+
+//     const axiosFetchData = async(processing)=>{
+//         // const options = {
+//         //     imdbID: imdbID,
+//         //     Poster: Poster,
+//         // }
+//         await axios.post("http://localhost:4000/users", /*options*/)
+//             .then(res => {
+//                 if (processing){
+//                     setSelectData(res.data)
+//                 }
+//             })
+//             .catch((err) => console.log(err));
+//     }
+
+//     useEffect(() => {
+//         let processing = true
+//         axiosFetchData(processing)
+//         return ()=>{
+//             processing = false
+//         }
+//     }, []);
+
+// */
