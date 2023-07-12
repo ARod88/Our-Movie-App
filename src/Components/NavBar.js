@@ -15,6 +15,8 @@ import axios from "axios";
 function NavBar() {
     const [selectData, setSelectData] = useState([]);
     const [text, setText] = useState("");
+    const [childDataOne, setChildDataOne] = useState('');
+    const [childDataTwo, setChildDataTwo] = useState('');
     // const userData = useContext(Context);
 
     useEffect(() => {
@@ -31,18 +33,22 @@ function NavBar() {
     };
 
 
-    const axiosPostData = async () => {
+
+
+    const axiosPostData = async (d1,d2) => {
         const postData = {
-            imdbID: "tt3794354",
-            Poster: "https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_SX300.jpg",
+            imdbID: d1,
+            Poster: d2,
         };
         await axios.post("http://localhost:4000/favorites", postData);
     };
 
-    const handleClickAdd = (e) => {
-        e.preventDefault();
+    const handleClickAdd = (dataOne, dataTwo) => {
+        
         setText("Added to Favorites!!");
-        axiosPostData();
+        setChildDataOne(dataOne)
+        setChildDataTwo(dataTwo)
+        axiosPostData(childDataOne, childDataTwo);
         // postDataToMongoDB()
     };
 
