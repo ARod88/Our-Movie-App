@@ -1,5 +1,7 @@
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 import "../SearchPage.css";
 import "../images.css";
 
@@ -8,6 +10,7 @@ const MovieShowPage = (props) => {
 
     const { id } = useParams();
     const [movieData, setMovieData] = useState([]);
+    const [text, setText] = useState("");
     const imdbID = id;
 
     const getMovieInfo = async (imdbID) => {
@@ -21,16 +24,27 @@ const MovieShowPage = (props) => {
 
     useEffect(() => {
         getMovieInfo(imdbID);
-    }, []);
+    }, [imdbID]);
 
-    const {handleClickAdd} = props
-    const {handleClickRemove} = props
 
-    // const handleClickOne = ({handleClickAdd})=>{
-    //     const dataOne = movieData.imdbID
-    //     const dataTwo = movieData.Poster
-    //     handleClickAdd(dataOne,dataTwo)
-    // }
+    const axiosPostData = async () => {
+        const postData = {
+            imdbID: movieData.imdbID,
+            Poster: movieData.Poster,
+        };
+        await axios.post("http://localhost:4000/favorites", postData);
+    };
+
+    const handleClickAdd = (e) => {
+        e.preventDefault()
+        setText("Added to Favorites!!");
+        axiosPostData();
+    };
+
+    const handleClickRemove = (e) => {
+        e.preventDefault();
+        setText("Removed from Favorites..");
+    };
 
     
     return (
@@ -58,7 +72,7 @@ const MovieShowPage = (props) => {
                     <button className="drop" onClick={handleClickRemove}>
                         Remove from Favorites
                     </button>
-                    <p>{props.text}</p>
+                    <p>{text}</p>
                 </ul>
             </div>
             <div className="divs-left divs-right divs-bottom divs-top">
@@ -72,29 +86,3 @@ const MovieShowPage = (props) => {
 export default MovieShowPage;
 
 
-
-// /*
-
-//     const axiosFetchData = async(processing)=>{
-//         // const options = {
-//         //     imdbID: imdbID,
-//         //     Poster: Poster,
-//         // }
-//         await axios.post("http://localhost:4000/users", /*options*/)
-//             .then(res => {
-//                 if (processing){
-//                     setSelectData(res.data)
-//                 }
-//             })
-//             .catch((err) => console.log(err));
-//     }
-
-//     useEffect(() => {
-//         let processing = true
-//         axiosFetchData(processing)
-//         return ()=>{
-//             processing = false
-//         }
-//     }, []);
-
-// */

@@ -42,17 +42,3 @@ const server = app.listen(port, () => {
     console.log(`Server is running ${port}`);
 });
 
-
-//////////////////////////////////////////////////////////////
-//                                                          //
-//////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-// app.listen(port, () => {
-//     console.log(`Server is running ${port}`);
-// });

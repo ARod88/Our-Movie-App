@@ -9,13 +9,9 @@ import SearchPage from "./SearchPage";
 import MovieShowPage from "./MovieShowPage";
 import NotFound from "./NotFound";
 import { useState, useEffect } from "react";
-import axios from "axios";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
     const [selectData, setSelectData] = useState([]);
-    const [text, setText] = useState("");
-    // const userData = useContext(Context);
 
     useEffect(() => {
         getInfo();
@@ -28,27 +24,6 @@ function NavBar() {
         if (responseJSON) {
             setSelectData(responseJSON);
         }
-    };
-
-
-    const axiosPostData = async () => {
-        const postData = {
-            imdbID: "tt3794354",
-            Poster: "https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_SX300.jpg",
-        };
-        await axios.post("http://localhost:4000/favorites", postData);
-    };
-
-    const handleClickAdd = (e) => {
-        e.preventDefault();
-        setText("Added to Favorites!!");
-        axiosPostData();
-        // postDataToMongoDB()
-    };
-
-    const handleClickRemove = (e) => {
-        e.preventDefault();
-        setText("Removed from Favorites..");
     };
 
     return (
@@ -93,16 +68,7 @@ function NavBar() {
                     element={<Favorites selectData={selectData} />}
                 />
                 <Route path="/searchpage" element={<SearchPage />} />
-                <Route
-                    path="/movieshowpage/:id"
-                    element={
-                        <MovieShowPage
-                            text={text}
-                            handleClickAdd={handleClickAdd}
-                            handleClickRemove={handleClickRemove}
-                        />
-                    }
-                />
+                <Route path="/movieshowpage/:id" element={<MovieShowPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>

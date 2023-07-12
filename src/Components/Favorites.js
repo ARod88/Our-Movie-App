@@ -1,8 +1,5 @@
-import { useState, useEffect } from "react";
 import "../SearchPage.css";
 import "../images.css";
-import { useContext } from "react";
-import Context from "./Context";
 import { Link } from "react-router-dom";
 
 const movieSlatePic2 = new URL(
