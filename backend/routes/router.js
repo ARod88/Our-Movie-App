@@ -3,7 +3,7 @@ const router = express.Router()
 const schemas = require('../models/schemas')
 
 
-router.post('/users', async(req,res)=>{
+router.post('/favorites', async(req,res)=>{
     const {imdbID, Poster} = req.body
 
     const favData = {imdbID: imdbID, Poster: Poster}

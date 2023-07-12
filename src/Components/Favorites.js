@@ -10,22 +10,7 @@ const movieSlatePic2 = new URL(
     import.meta.url
 );
 
-export default function Favorite() {
-    const [selectData, setSelectData] = useState([]);
-    // const userData = useContext(Context);
-
-    const getInfo = async () => {
-        const url = `http://localhost:4000/users`;
-        const response = await fetch(url);
-        const responseJSON = await response.json();
-        if (responseJSON) {
-            setSelectData(responseJSON);
-        }
-    };
-
-    useEffect(() => {
-        getInfo();
-    }, []);
+export default function Favorite(props) {
 
     return (
         <div>
@@ -36,7 +21,7 @@ export default function Favorite() {
                     <h2 className="">MOVIES</h2>
                     <div className="container">
                         <div className="row">
-                            {selectData.map((movie, index) => (
+                            {props.selectData.map((movie, index) => (
                                 <div className="col-md-4">
                                     <Link to={`/movieshowpage/${movie.imdbID}`}>
                                         <img

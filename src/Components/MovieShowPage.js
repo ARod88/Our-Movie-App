@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import "../SearchPage.css";
 import "../images.css";
 
-const MovieShowPage = () => {
+const MovieShowPage = (props) => {
     const { id } = useParams();
     const [movieData, setMovieData] = useState([]);
-    const [text, setText] = useState("");
     const imdbID = id;
 
     const getMovieInfo = async (imdbID) => {
@@ -22,14 +21,8 @@ const MovieShowPage = () => {
         getMovieInfo(imdbID);
     }, []);
 
-
-    const handleClickAdd = () => {
-        setText("Added to Favorites!!");
-    };
-
-    const handleClickRemove = () => {
-        setText("Removed from Favorites..");
-    };
+    const {handleClickAdd} = props
+    const {handleClickRemove} = props
 
     
     return (
@@ -57,7 +50,7 @@ const MovieShowPage = () => {
                     <button className="drop" onClick={handleClickRemove}>
                         Remove from Favorites
                     </button>
-                    <p>{text}</p>
+                    <p>{props.text}</p>
                 </ul>
             </div>
             <div className="divs-left divs-right divs-bottom divs-top">
