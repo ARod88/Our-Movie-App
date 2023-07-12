@@ -16,6 +16,7 @@ export default function Favorite(props) {
         <div>
             <h2>FAVORITE PAGE</h2>
 
+
             <div className="">
                 <div>
                     <h2 className="">MOVIES</h2>
@@ -48,3 +49,4 @@ export default function Favorite(props) {
         </div>
     );
 }
+

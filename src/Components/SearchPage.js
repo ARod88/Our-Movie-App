@@ -101,7 +101,7 @@ const SearchPage = () => {
                 alt="movie-slate-pic-2"
               />
             </div>
-            <div className="col-md-8 d-flex flex-wrap">
+            <div className="col-md-8 d-flex flex-wrap" movieListed>
               <MovieList movies={movies} />
             </div>
           </div>
