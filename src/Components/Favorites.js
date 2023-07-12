@@ -14,11 +14,11 @@ export default function Favorite(props) {
 
     return (
         <div>
-            <h1>FAVORITE PAGE</h1>
+            <h2>FAVORITE PAGE</h2>
 
-            <div className="favorite">
+            <div className="">
                 <div>
-                    <h2 className="font-fav">MOVIES</h2>
+                    <h2 className="">MOVIES</h2>
                     <div className="container">
                         <div className="row">
                             {props.selectData.map((movie, index) => (
