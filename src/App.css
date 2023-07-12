@@ -286,7 +286,6 @@ h1 , .notfound{
 
   .form-control:focus::placeholder {
     color: black;
-    caret-color: ;
   }
   
   
