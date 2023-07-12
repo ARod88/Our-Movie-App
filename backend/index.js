@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
 const mongoose = require("mongoose");
-require("dotenv/config");
+require("dotenv").config();
 
 const app = express();
 
@@ -25,7 +25,23 @@ mongoose
     .then(() => console.log("DB Connected!"))
     .catch((err) => console.log(err));
 
+const burp = mongoose.connection
+
+burp.on('error', (error) => {
+    console.log(error)
+})
+
+burp.once('connected', () => {
+    console.log('Database Connected');
+})
+
 const port = process.env.PORT;
+
 const server = app.listen(port, () => {
     console.log(`Server is running ${port}`);
 });
+
+
+// app.listen(port, () => {
+//     console.log(`Server is running ${port}`);
+// });
