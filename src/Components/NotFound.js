@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 
 const movieSlatePicture = new URL('../images/movie-slate-open.png', import.meta.url);
 
