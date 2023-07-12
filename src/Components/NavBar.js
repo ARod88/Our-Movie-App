@@ -30,27 +30,6 @@ function NavBar() {
         }
     };
 
-    // async function postDataToMongoDB() {
-    //     const data = {
-    //       imdbID: "",
-    //       Poster: "",
-    //     };
-
-    //     await fetch('http://localhost:4000/favorites', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       body: JSON.stringify(data),
-    //     })
-    //       .then(response => response.json())
-    //       .then(result => {
-    //         console.log('Data posted to MongoDB:', result);
-    //       })
-    //       .catch(error => {
-    //         console.error('Error posting data to MongoDB:', error);
-    //       });
-    //   }
 
     const axiosPostData = async () => {
         const postData = {
