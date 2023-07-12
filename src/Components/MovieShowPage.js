@@ -26,6 +26,12 @@ const MovieShowPage = (props) => {
     const {handleClickAdd} = props
     const {handleClickRemove} = props
 
+    // const handleClickOne = ({handleClickAdd})=>{
+    //     const dataOne = movieData.imdbID
+    //     const dataTwo = movieData.Poster
+    //     handleClickAdd(dataOne,dataTwo)
+    // }
+
     
     return (
         <div className="row">

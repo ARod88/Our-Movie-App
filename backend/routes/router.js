@@ -12,7 +12,7 @@ router.post("/favorites", async (req, res) => {
     console.log(Poster);
 
     const favData = { imdbID: imdbID, Poster: Poster };
-    const newFavorite = new schemas.Users({ favData });
+    const newFavorite = new schemas.Users( favData );
     const saveFavorite = await newFavorite.save();
     if (saveFavorite) {
         res.send("Gotcha!");
