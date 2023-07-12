@@ -37,15 +37,6 @@ export default function Favorite(props) {
                 </div>
                 <br />
 
-                <div>
-                    <h2 className="font-fav">SERIES</h2>
-                </div>
-                <br />
-
-                <div>
-                    <h2 className="font-fav">VIDEOGAMES</h2>
-                </div>
-                <br />
             </div>
             <div className="col-md-4">
                 <img
