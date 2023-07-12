@@ -1,11 +1,11 @@
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "../SearchPage.css";
+import "../images.css";
 
 
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import "../App.css"
-import "../images.css"
+const MovieShowPage = (props) => {
 
-const MovieShowPage = () => {
     const { id } = useParams();
     const [movieData, setMovieData] = useState([]);
     const imdbID = id;
@@ -21,8 +21,12 @@ const MovieShowPage = () => {
 
     useEffect(() => {
         getMovieInfo(imdbID);
-    }, [imdbID]);
+    }, []);
 
+    const {handleClickAdd} = props
+    const {handleClickRemove} = props
+
+    
     return (
         <div className="row">
             <div className="width-40 divs-left image-container">
@@ -41,9 +45,14 @@ const MovieShowPage = () => {
                     <li>Cast: {movieData.Actors}</li>
                     <li>Box Office: {movieData.BoxOffice}</li>
                     <li>Awards: {movieData.Awards}</li>
-                    <li>
-                        <button className="drop">Add to Favorites</button>
-                    </li>
+
+                    <button className="drop" onClick={handleClickAdd}>
+                        Add to Favorites
+                    </button>
+                    <button className="drop" onClick={handleClickRemove}>
+                        Remove from Favorites
+                    </button>
+                    <p>{props.text}</p>
                 </ul>
             </div>
             <div className="divs-left divs-right divs-bottom divs-top">
@@ -55,3 +64,31 @@ const MovieShowPage = () => {
 };
 
 export default MovieShowPage;
+
+
+
+// /*
+
+//     const axiosFetchData = async(processing)=>{
+//         // const options = {
+//         //     imdbID: imdbID,
+//         //     Poster: Poster,
+//         // }
+//         await axios.post("http://localhost:4000/users", /*options*/)
+//             .then(res => {
+//                 if (processing){
+//                     setSelectData(res.data)
+//                 }
+//             })
+//             .catch((err) => console.log(err));
+//     }
+
+//     useEffect(() => {
+//         let processing = true
+//         axiosFetchData(processing)
+//         return ()=>{
+//             processing = false
+//         }
+//     }, []);
+
+// */
