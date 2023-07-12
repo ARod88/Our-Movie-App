@@ -1,3 +1,33 @@
+We created an app called Our Movie App. 
+
+In this app we can search for movies, games and series
+
+followed by our cool movie slate icon. 
+
+After clicking search and typing your input, click on 
+
+selected item from various 
+
+title options that show in the screen. 
+
+There is a description of (i.e. Movie "The Matrix") of the 
+
+title selected item. Includes: title, media type, rating, debut, 
+
+runtime, genre, director(s), writer(s), cast, box office, and awards. 
+
+In the description, there's a favorites and remove favorites
+
+icon which will direct to the favorites page where 
+
+the favorite movies,games or series will be added to the favorites page.
+
+Overall, this page will improve your movie knowledge and appreciation for
+
+entertainment.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
