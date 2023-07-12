@@ -6,8 +6,10 @@ const userSchema = new Schema({
     Poster: {type: String},
 })
 
-const Users = mongoose.model('Users', userSchema, 'favorites')
+const Users = mongoose.model('Users', userSchema,'favorites')
 
 const mySchemas = {'Users':Users}
 
 module.exports = mySchemas
+
+// module.exports = mongoose.model('favorites', userSchema)

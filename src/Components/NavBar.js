@@ -81,7 +81,7 @@ function NavBar() {
                         style={{ width: "100%" }}
                     >
                         <Nav.Item>
-                            <Nav.Link as={Link} to="/home" className="nav-link">
+                            <Nav.Link as={Link} to="/" className="nav-link">
                                 Home
                             </Nav.Link>
                         </Nav.Item>
@@ -108,7 +108,7 @@ function NavBar() {
             </Navbar>
 
             <Routes>
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route
                     path="/favorites"
                     element={<Favorites selectData={selectData} />}
