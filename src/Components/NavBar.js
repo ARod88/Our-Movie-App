@@ -9,15 +9,9 @@ import SearchPage from "./SearchPage";
 import MovieShowPage from "./MovieShowPage";
 import NotFound from "./NotFound";
 import { useState, useEffect } from "react";
-import axios from "axios";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function NavBar() {
     const [selectData, setSelectData] = useState([]);
-    const [text, setText] = useState("");
-    const [childDataOne, setChildDataOne] = useState('');
-    const [childDataTwo, setChildDataTwo] = useState('');
-    // const userData = useContext(Context);
 
     useEffect(() => {
         getInfo();
@@ -30,31 +24,6 @@ function NavBar() {
         if (responseJSON) {
             setSelectData(responseJSON);
         }
-    };
-
-
-
-
-    const axiosPostData = async (d1,d2) => {
-        const postData = {
-            imdbID: d1,
-            Poster: d2,
-        };
-        await axios.post("http://localhost:4000/favorites", postData);
-    };
-
-    const handleClickAdd = (dataOne, dataTwo) => {
-        
-        setText("Added to Favorites!!");
-        setChildDataOne(dataOne)
-        setChildDataTwo(dataTwo)
-        axiosPostData(childDataOne, childDataTwo);
-        // postDataToMongoDB()
-    };
-
-    const handleClickRemove = (e) => {
-        e.preventDefault();
-        setText("Removed from Favorites..");
     };
 
     return (
@@ -99,16 +68,7 @@ function NavBar() {
                     element={<Favorites selectData={selectData} />}
                 />
                 <Route path="/searchpage" element={<SearchPage />} />
-                <Route
-                    path="/movieshowpage/:id"
-                    element={
-                        <MovieShowPage
-                            text={text}
-                            handleClickAdd={handleClickAdd}
-                            handleClickRemove={handleClickRemove}
-                        />
-                    }
-                />
+                <Route path="/movieshowpage/:id" element={<MovieShowPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>
