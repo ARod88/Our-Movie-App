@@ -68,7 +68,10 @@ function NavBar() {
                     element={<Favorites selectData={selectData} />}
                 />
                 <Route path="/searchpage" element={<SearchPage />} />
-                <Route path="/movieshowpage/:id" element={<MovieShowPage />} />
+                <Route
+                    path="/movieshowpage/:id"
+                    element={<MovieShowPage selectData={selectData} />}
+                />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>
