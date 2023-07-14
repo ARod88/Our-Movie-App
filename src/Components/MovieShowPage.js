@@ -31,6 +31,7 @@ const MovieShowPage = (props) => {
         const postData = {
             imdbID: movieData.imdbID,
             Poster: movieData.Poster,
+            Type: movieData.Type
         };
         await axios.post("http://localhost:4000/favorites", postData);
     };
@@ -41,9 +42,12 @@ const MovieShowPage = (props) => {
         axiosPostData();
     };
 
+    // Add DELETE code here
+
     const handleClickRemove = (e) => {
         e.preventDefault();
         setText("Removed from Favorites..");
+        // Call DELETE function here
     };
 
     
