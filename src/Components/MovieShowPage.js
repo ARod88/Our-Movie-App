@@ -1,4 +1,4 @@
-
+import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -11,7 +11,8 @@ const MovieShowPage = (props) => {
     const { id } = useParams();
     const [movieData, setMovieData] = useState([]);
     const [text, setText] = useState("");
-    const imdbID = id;
+
+    
 
     const getMovieInfo = async (imdbID) => {
         const url = `http://www.omdbapi.com/?i=${imdbID}&plot=full&apikey=9d06303`;
@@ -23,8 +24,8 @@ const MovieShowPage = (props) => {
     };
 
     useEffect(() => {
-        getMovieInfo(imdbID);
-    }, [imdbID]);
+        getMovieInfo(id);
+    }, [id]);
 
 
     const axiosPostData = async () => {
@@ -42,19 +43,23 @@ const MovieShowPage = (props) => {
         axiosPostData();
     };
 
-    // Add DELETE code here
+
+    const axiosDeleteData = async (id) => {
+        await axios.delete(`http://localhost:4000/delete/${id}`)
+    }
 
     const handleClickRemove = (e) => {
         e.preventDefault();
         setText("Removed from Favorites..");
-        // Call DELETE function here
+        // axiosDeleteData(movieData.imdbID)
     };
 
     
+
     return (
         <div className="row">
             <div className="width-40 divs-left image-container">
-                <img className="full-img" src={movieData.Poster} alt='Movie Poster'></img>
+                <img className="hundred" src={movieData.Poster} alt='Movie Poster'></img>
             </div>
             <div className="width-60 divs-left">
                 <ul>

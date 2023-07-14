@@ -47,3 +47,7 @@
 .fit2 {
     width: 60%;
 }
+
+.no-padding {
+    padding: 0px;
+}
