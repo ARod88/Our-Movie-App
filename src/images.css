@@ -3,7 +3,7 @@
     background-color: white;
 }
 
-.max-height {
+/* .max-height {
     max-height: fit-content;
 }
 
@@ -29,5 +29,21 @@
     padding-left: 15px;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
-  }
+  } */
 
+.movie-app > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.hundred {
+    width: 100%;
+}
+
+.fit {
+    width: 20%;
+}
+
+.fit2 {
+    width: 60%;
+}

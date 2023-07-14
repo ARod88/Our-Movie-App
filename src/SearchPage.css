@@ -1,3 +1,7 @@
 .divs-right {
     padding-right: 10%;
 }
+
+.no-padding {
+    padding: 0;
+}

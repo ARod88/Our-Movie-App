@@ -1,5 +1,7 @@
-import "../SearchPage.css";
+// import "../SearchPage.css";
 import "../images.css";
+// import "../App.css"
+
 import { Link } from "react-router-dom";
 
 const movieSlatePic2 = new URL(
@@ -8,42 +10,99 @@ const movieSlatePic2 = new URL(
 );
 
 export default function Favorite(props) {
-
     return (
-        <div>
+        <>
             <h2>FAVORITE PAGE</h2>
 
-
             <div className="">
-                <div>
+                <div className="">
                     <h2 className="">MOVIES</h2>
-                    <div className="container">
+                    <div className="container-fluid movie-app">
                         <div className="row">
-                            {props.selectData.map((movie, index) => (
-                                <div className="col-md-4">
-                                    <Link to={`/movieshowpage/${movie.imdbID}`}>
-                                        <img
-                                            className="img-fluid"
-                                            src={movie.Poster}
-                                            alt="picture here..."
-                                        ></img>
-                                    </Link>
-                                </div>
-                            ))}
+                            {props.selectData
+                                .filter((stuff) => stuff.Type === "movie")
+                                .map((movie) => (
+                                    <div className="fit">
+                                        <Link
+                                            to={`/movieshowpage/${movie.imdbID}`}
+                                        >
+                                            <img
+                                                className="hundred"
+                                                src={movie.Poster}
+                                                alt="picture here..."
+                                            ></img>
+                                        </Link>
+                                    </div>
+                                ))}
                         </div>
                     </div>
                 </div>
                 <br />
 
+                <div>
+                    <h2 className="">SERIES</h2>
+                    <div className="container-fluid movie-app">
+                        <div className="row">
+                            {props.selectData
+                                .filter((stuff) => stuff.Type === "series")
+                                .map((movie) => (
+                                    <div className="fit">
+                                        <Link
+                                            to={`/movieshowpage/${movie.imdbID}`}
+                                        >
+                                            <img
+                                                className="hundred"
+                                                src={movie.Poster}
+                                                alt="picture here..."
+                                            ></img>
+                                        </Link>
+                                    </div>
+                                ))}
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div>
+                    <h2 className="">GAMES</h2>
+                    <div className="container-fluid movie-app">
+                        <div className="row">
+                            {props.selectData
+                                .filter((stuff) => stuff.Type === "game")
+                                .map((movie) => (
+                                    <div className="fit">
+                                        <Link
+                                            to={`/movieshowpage/${movie.imdbID}`}
+                                        >
+                                            <img
+                                                className="hundred"
+                                                src={movie.Poster}
+                                                alt="picture here..."
+                                            ></img>
+                                        </Link>
+                                    </div>
+                                ))}
+                        </div>
+                    </div>
+                </div>
+                <br />
             </div>
-            <div className="col-md-4">
-                <img
-                    className="movie-slate-2"
-                    src={movieSlatePic2}
-                    alt="movie-slate-pic-2"
-                />
-            </div>
-        </div>
+        </>
     );
 }
 
+/*
+
+{props.selectData.filter(stuff=>stuff.Type === "series").map((movie, index) => (
+    <div className="col-md-4">
+        <Link to={`/movieshowpage/${movie.imdbID}`}>
+            <img
+                className="img-fluid"
+                src={movie.Poster}
+                alt="picture here..."
+            ></img>
+        </Link>
+    </div>
+))}
+
+*/
